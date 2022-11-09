@@ -1,0 +1,22 @@
+import { MenuButton, Menu, MenuList, MenuItem, Box  } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+
+export default function MenuButtondata(menu){
+    return(
+        <Box >
+        <Menu position="s" >
+          <MenuButton position="s">
+           {menu}<ChevronDownIcon />
+          </MenuButton>
+          <MenuList color="black" position="relative">
+            <MenuItem>Download</MenuItem>
+            <MenuItem>Create a Copy</MenuItem>
+            <MenuItem>Mark as Draft</MenuItem>
+            <MenuItem>Delete</MenuItem>
+            <MenuItem>Attend a Workshop</MenuItem>
+          </MenuList>
+        </Menu>
+      </Box>
+
+    )
+}
