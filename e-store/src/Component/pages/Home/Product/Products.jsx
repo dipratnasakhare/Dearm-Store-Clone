@@ -1,25 +1,31 @@
-import { Text, Heading } from "@chakra-ui/react"
-import AddBar from "./AddBar/AddBar"
-import BestsellersSlider from "./Bestsellers/BestsellersSlider"
-import CategoryBox from "./CatogaryBox/CategoryBox"
-import BrandsFeatured from "./FeaturedBrands/Featured Brands"
-import SliderBoxThird from "./SliderBox/SliderBoxThird"
-import SliderForth from "./sliderforth/SliderForth"
-import SliderProduct from "./SliderProduct/SliderProduct"
+import { Text, Box, Heading } from "@chakra-ui/react"
+import AddBar from "./ThirdAddBar/AddBar"
+import BestsellersSlider from "./ForthBestsellers/BestsellersSlider"
+import CategoryBox from "./SecondCatogaryBox/CategoryBox"
+import BrandsFeatured from "./SevenFeaturedBrands/Featured Brands"
+import SliderBoxThird from "./SixSliderBox/SliderBoxThird"
+import SliderForth from "./EightSliderForth/SliderForth"
+import SliderProduct from "./FirstSliderProduct/SliderProduct"
+import Products from "./FifthProductBox/Products"
+
+import Style from "./Style/Products.module.css" 
 export default function Product(){
 
     return(
-        <div>
-              <Heading as='h3' size='xl'>
-                 2x Points on EltaMD
-              </Heading>
-
-            <Text>Rewards members earn DOUBLE on sunscreen, moisturizers & more. Plus, receive a $16 gift when you spend $75+ on the brand.</Text>
+        <div className={Style.productbox}>
+             <Box m="3rem">
+                    <Heading as='h3' size='xl'>
+                        2x Points on EltaMD
+                    </Heading>
+                    <Text>Rewards members earn DOUBLE on sunscreen, moisturizers & more. Plus, receive a $16 gift when you spend $75+ on the brand.</Text>
+             </Box>
 
             <SliderProduct/>
+
             <CategoryBox/>
             <AddBar/>
             <BestsellersSlider/>
+            <Products />
             <SliderBoxThird/>
 
             <BrandsFeatured />

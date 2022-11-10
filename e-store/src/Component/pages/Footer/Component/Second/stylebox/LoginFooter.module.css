@@ -1,20 +1,23 @@
 .boxdata {
   width: 0px;
   height: auto;
-
   border: 1px solid rgb(0, 0, 0);
   padding: 15px;
   padding-bottom: 4rem;
 
 }
 
-.Login > div {
+.Login >  div > div > p{
+  margin-bottom: 20px;
+}
 
+.Login > div > p{
+  line-height: 35px;
+}
+
+.Login > div {
   padding: 1rem;
   text-align: left;
-}
-.Login P {
-  color: blue;
 }
 
 .Login P:hover {

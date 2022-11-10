@@ -1,5 +1,5 @@
 import { Box, Text, Image } from "@chakra-ui/react";
-import styled from "./stylebox/FirstBox.module.css";
+import styled from "./stylebox/TextFooter.module.css";
 
 export default function footer() {
   let first = [
@@ -93,7 +93,7 @@ export default function footer() {
 
 
   return (
-    <Box border="1px solid">
+    <Box >
       
       <Box height="6rem">
 
