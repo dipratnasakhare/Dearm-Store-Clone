@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Box } from "@chakra-ui/react";
 export default function SlideShowclear() {
 
   const responsive = {
@@ -31,12 +32,16 @@ export default function SlideShowclear() {
   return (
     <Carousel
   swipeable={false}
+  time={5}
   draggable={false}
   showDots={true}
   responsive={responsive}
-  ssr={true} // means to render carousel on server-side.
+  // ssr={true} // means to render carousel on server-side.
   infinite={true}
-  
+
+   autoPlay={true}
+  autoPlaySpeed={2000}
+
   keyBoardControl={true}
   customTransition="all .5"
   transitionDuration={500}
@@ -47,9 +52,9 @@ export default function SlideShowclear() {
 >
   {sliderimg.map((ele)=>{
     return(
-      <div style ={{width:"100%",height:"500px"}}>
+      <Box >
       <img src={ele} alt="" />
-    </div>
+    </Box>
     )
   })}
   

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react" 
+import { Box, Center, Flex, Heading, Text, Image } from "@chakra-ui/react" 
 
 export default function Products(){
 
@@ -21,16 +21,18 @@ export default function Products(){
     ]
 
     return(
-      <Flex>
+     <Box display="flex" m="auto" gap={10}>
+        
       {Products.map((ele)=>{
         return(
-            <Box>
-                <Box><img src={ele.img} alt="" /></Box>
+            <Box  gap={10} alignContent={"center"}>
+                <Box><Image border="5px solid red"   src={ele.img} alt="" /></Box>
                 <Box><Heading>{ele.text}</Heading></Box>
                 <Box><Text>{ele.p}</Text></Box>
             </Box>
         )
       })}
-      </Flex>
+      
+     </Box>
     )
 }

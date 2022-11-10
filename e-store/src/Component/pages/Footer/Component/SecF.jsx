@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react"
 import style from "./Footercss/SecondF.module.css"
 
-import FirstBox from "./Second/FirstBox"
-import SecBox from "./Second/SecBox"
+import FirstBox from "./Second/TextFooter"
+import SecBox from "./Second/LoginFooter"
 
 
 export default function footer(){
@@ -12,7 +12,7 @@ export default function footer(){
      
     return(
         <>
-        <Box border="1px solid red" className={style.box}>
+        <Box borderBottom="1px solid" gap={10} className={style.box}>
            <SecBox/>
            <FirstBox/>
         </Box>

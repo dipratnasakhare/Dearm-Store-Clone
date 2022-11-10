@@ -2,31 +2,39 @@ import {
   Button,
   Flex,
   Heading,
-  Spacer,
   ButtonGroup,
   Box,
-  Input
+  Text,
+  Input,
+  InputRightElement,
+  InputGroup,
+  InputLeftElement
 } from "@chakra-ui/react";
 import img from "../../../Logo/DreamStore.png"
+import cart from "../../../Logo/shoppingcart.png"
+import user from "../../../Logo/user.png"
+
+
 import ProductMenu from "./ProductMenu/ProductMenu";
+import {  SearchIcon } from "@chakra-ui/icons";
+
 
 export default function Navbar() {
   return (
-    <div style={{ height: "8rem", border: "1px solid" }}>
+    <div style={{ height: "8rem", width:"100%" }}>
 
-
-      <Flex minWidth="max-content" alignItems="center" gap="2">
-        <Box p="2" display="flex" gap="10px" border="1px solid" >
+      <Flex width="90%" margin="auto"  minWidth="max-content" alignItems="center" gap="2">
+        <Box p="2" display="flex" gap="10px"  >
 
 {/* logo here  */}
 
-          <Box border="1px solid" style={{width:"60px"}}>
+          <Box style={{width:"60px"}}>
             <img src={img} alt="" width="60px"/>
           </Box>
 
 {/* website text here */}
 
-         <Box border="1px solid" margin="auto">
+         <Box  margin="auto">
            {/* <Center> */}
            <Heading as='h3' size='xl'>
              DreamStore
@@ -37,15 +45,34 @@ export default function Navbar() {
 {/* search box  */}
 
         </Box>
+        <InputGroup>
+    <InputLeftElement
+    />
+    <Input placeholder='Search for a product barnd...' />
+    <InputRightElement children={<SearchIcon  />} />
+  </InputGroup>
 
-        <Input placeholder='Search for a product barnd...'  />
+      
 
-        <Spacer />
+        <ButtonGroup gap="2"> 
 
-        <ButtonGroup gap="2">
-
-          <Button colorScheme="teal">Account</Button>
-          <Button colorScheme="teal">Cart</Button>
+        <Box gap={3} display="flex" width="100px">
+          <Box>
+              <img width="30px" src={user} alt="" />
+          </Box>
+          <Box>
+              <Text fontSize='xl' colorScheme="teal">User</Text>
+          </Box>
+        </Box> 
+          
+        <Box  gap={3} display="flex" width="100px">
+          <Box>
+              <img width="30px" src={cart} alt="" />
+          </Box>
+          <Box>
+              <Text fontSize='xl' colorScheme="teal">Cart</Text>
+          </Box>
+        </Box> 
 
         </ButtonGroup>  
       </Flex>

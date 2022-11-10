@@ -9,8 +9,8 @@
 
 .box > div  p {
 text-align: left;
-/* margin-bottom: 8px; */
-    
+line-height: 38px;
+
 }
 
 .box > div > div p:hover{
@@ -19,7 +19,6 @@ text-align: left;
 }
 .social {
     display: flex;
-    /* margin: auto; */
     width: 95%;
   }
   .social > div > img {

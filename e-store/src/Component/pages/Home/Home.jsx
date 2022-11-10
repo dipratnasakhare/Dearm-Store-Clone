@@ -1,5 +1,5 @@
 import Product from "./Product/Products";
-import SlideShow from "./SlideShow/SlidShow";
+import SlideShow from "./TopSliderbar/SlidShow";
 
 export default function Home(){
 
