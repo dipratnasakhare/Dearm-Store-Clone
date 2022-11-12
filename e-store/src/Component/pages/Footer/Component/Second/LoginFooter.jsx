@@ -5,6 +5,7 @@ import {
   Input,
   Heading,
   Button,
+  GridItem,
 } from "@chakra-ui/react";
 import { useState } from "react";
 // import { NavLink } from "react-router-dom";
@@ -25,9 +26,9 @@ export default function Footer() {
 
   return (
     <Box>
-      <Box height="6rem" gap="5" >
-          <Text>Sign up to our newsletters and receive the latest exclusive discounts and deals</Text>
-           <Button _hover="none" color="white" bg="black">SIGN ME UP</Button>
+      <Box height="6rem" mb={4} >
+          <Text mb={4}>Sign up to our newsletters and receive the latest exclusive discounts and deals</Text>
+           <Button  _hover="none" color="white" bg="black">SIGN ME UP</Button>
           </Box>
     <Box borderTop="1px solid">
 

@@ -1,12 +1,14 @@
 import Product from "./Product/Products";
-import SlideShow from "./TopSliderbar/SlidShow";
-
+import { Divider, Box} from "@chakra-ui/react";
+import style from "./style/Home.module.css"
 export default function Home(){
 
     return(
+        <Box className={style.HomeBox}>
         <div>
-        <SlideShow/>
         <Product/>
         </div>
+        <Divider/>
+        </Box>
     )
 }

@@ -2,26 +2,9 @@
 
 .box{
     width: 95%;
-   margin: auto;
+    margin: auto;
     height: 30rem;
     margin-top: 3rem;
-    display: flex;
-}
-.box > div:nth-child(1){
-    width: 30%;
-}
-.box > div:nth-child(2){
-    width: 60%;
-    
 }
 
-.social {
-    display: flex;
-    margin: auto;
-    width: 95%;
-  }
-  .social > div > img {
-    width: 60px;
-    margin: auto;
-  }
-  
+

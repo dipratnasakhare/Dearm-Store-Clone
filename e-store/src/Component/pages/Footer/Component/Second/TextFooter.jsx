@@ -1,4 +1,4 @@
-import { Box, Text, Image } from "@chakra-ui/react";
+import { Box, Text, Image, GridItem, SimpleGrid } from "@chakra-ui/react";
 import styled from "./stylebox/TextFooter.module.css";
 
 export default function footer() {
@@ -68,8 +68,6 @@ export default function footer() {
       text: "Best Buy Business",
     },
   ];
-  
-
 
   let social = [
     {
@@ -89,52 +87,56 @@ export default function footer() {
     },
   ];
 
-
-
-
   return (
-    <Box >
-      
-      <Box height="6rem">
-
-          <Box gap="5" className={styled.social}>
+    <Box>
+      <Box mb="16px" height="6rem" display={["none", "flex"]}>
+        <Box gap="5"  className={styled.social}>
           <Text>Contact us</Text>
 
-            {social.map((ele) => {
-              return (
-                <Box>
-                  <Image src={ele.img} />
-                </Box>
-              );
-            })}
-          </Box>
-
-          
+          {social.map((ele) => {
+            return (
+              <Box>
+                <Image src={ele.img} />
+              </Box>
+            );
+          })}
         </Box>
-    <Box  gap="10px"  className={styled.box}>
-       
-      <Box borderTop="1px solid" >
-
-        <Text color="black">Order & Purchases</Text>
-        {first.map((ele) => {
-          return <Box><Text>{ele.text}</Text></Box>;
-        })}
       </Box>
 
-      <Box borderTop="1px solid">
-        <Text color="black">Support & Services</Text>
-        {second.map((ele) => {
-          return <Box><Text>{ele.text}</Text></Box>;
-        })}
-      </Box>
+      <SimpleGrid columns={[1, 3]} gap="10px" className={styled.box}>
+        <Box borderTop="1px solid">
+          <Text color="black">Order & Purchases</Text>
+          {first.map((ele) => {
+            return (
+              <Box>
+                <Text>{ele.text}</Text>
+              </Box>
+            );
+          })}
+        </Box>
 
-      <Box borderTop="1px solid">
-        <Text color="black">Partnerships</Text>
-        {third.map((ele) => {
-          return <Box><Text>{ele.text}</Text></Box>;
-        })}
-      </Box>
-    </Box>
+        <Box borderTop="1px solid">
+          <Text color="black">Support & Services</Text>
+          {second.map((ele) => {
+            return (
+              <Box>
+                <Text>{ele.text}</Text>
+              </Box>
+            );
+          })}
+        </Box>
+
+        <Box borderTop="1px solid">
+          <Text color="black">Partnerships</Text>
+          {third.map((ele) => {
+            return (
+              <Box>
+                <Text>{ele.text}</Text>
+              </Box>
+            );
+          })}
+        </Box>
+      </SimpleGrid>
     </Box>
   );
 }

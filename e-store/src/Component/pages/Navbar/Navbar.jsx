@@ -1,5 +1,4 @@
 import {
-  Button,
   Flex,
   Heading,
   ButtonGroup,
@@ -8,80 +7,100 @@ import {
   Input,
   InputRightElement,
   InputGroup,
-  InputLeftElement
+  InputLeftElement,
+  IconButton,
 } from "@chakra-ui/react";
-import img from "../../../Logo/DreamStore.png"
-import cart from "../../../Logo/shoppingcart.png"
-import user from "../../../Logo/user.png"
-
-
+import img from "../../../Logo/DreamStore.png";
+import cart from "../../../Logo/shoppingcart.png";
+import user from "../../../Logo/user.png";
+import {useState} from "react"
 import ProductMenu from "./ProductMenu/ProductMenu";
-import {  SearchIcon } from "@chakra-ui/icons";
-
+import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
+import {useNavigate} from "react-router-dom"
 
 export default function Navbar() {
+
+  let [hamburger , sethamburger] = useState(false)
+  let [hamburgergap , sethamburgep] = useState(null)
+
+  const navigate = useNavigate();
+
   return (
-    <div style={{ height: "8rem", width:"100%" }}>
+    <Box pos="sticky" h={["3.5rem", "8rem"]} mb={hamburgergap} >
+      <Flex
+        width="90%"
+        margin="auto"
+        minWidth="max-content"
+        alignItems="center"
+        gap={[3, 2]}
+        
 
-      <Flex width="90%" margin="auto"  minWidth="max-content" alignItems="center" gap="2">
-        <Box p="2" display="flex" gap="10px"  >
+      >
+        <Box p="2" display="flex" gap="10px">
+          {/* HamburgerIcon */}
 
-{/* logo here  */}
+          <Flex display={["flex", "none"]} onClick={()=>{
+            sethamburger(!hamburger)
+            sethamburgep("20rem")
+            if(hamburger){
+              sethamburgep(null)
+            }
+            }}>
+            <IconButton aria-label="Search database" icon={<HamburgerIcon />} />
+          </Flex>
 
-          <Box style={{width:"60px"}}>
-            <img src={img} alt="" width="60px"/>
-          </Box>
+          {/* logo here  */}
 
-{/* website text here */}
+          <Flex gap={1} m="auto" onClick={()=>navigate("/")}>
+            <Box  w={["40px", "68px"]}  m="auto" mt={[null, null, "8px"]} >
+              <img src={img} alt="" width="65px" />
+            </Box>
 
-         <Box  margin="auto">
-           {/* <Center> */}
-           <Heading as='h3' size='xl'>
-             DreamStore
-           </Heading>
-           {/* </Center> */}
-         </Box>
+            {/* website text here */}
 
-{/* search box  */}
+            <Box margin="auto">
+              {/* <Center> */}
+              <Heading as="h3" size={["lg", "xl"]}>
+                DreamStore
+              </Heading>
+              {/* </Center> */}
+            </Box>
+          </Flex>
 
+          {/* search box  */}
         </Box>
-        <InputGroup>
-    <InputLeftElement
-    />
-    <Input placeholder='Search for a product barnd...' />
-    <InputRightElement children={<SearchIcon  />} />
-  </InputGroup>
+        <InputGroup display={["None", "flex"]}>
+          <InputLeftElement />
+          <Input placeholder="Search for a product barnd..." />
+          <InputRightElement children={<SearchIcon />} />
+        </InputGroup>
 
-      
-
-        <ButtonGroup gap="2"> 
-
-        <Box gap={3} display="flex" width="100px">
-          <Box>
+        <ButtonGroup>
+          <Box gap={[1, 3]} display="flex" width={["70%", "100px"]}>
+            <Box>
               <img width="30px" src={user} alt="" />
+            </Box>
+            <Box display={["none", "flex"]}>
+              <Text fontSize="xl" colorScheme="teal">
+                User
+              </Text>
+            </Box>
           </Box>
-          <Box>
-              <Text fontSize='xl' colorScheme="teal">User</Text>
-          </Box>
-        </Box> 
-          
-        <Box  gap={3} display="flex" width="100px">
-          <Box>
-              <img width="30px" src={cart} alt="" />
-          </Box>
-          <Box>
-              <Text fontSize='xl' colorScheme="teal">Cart</Text>
-          </Box>
-        </Box> 
 
-        </ButtonGroup>  
+          <Box onClick={()=>navigate("/carttable")} gap={[1, 3]} display="flex" width={["70%", "100px"]}>
+            <Box>
+              <img width="30px" src={cart} alt="" />
+            </Box>
+            <Box display={["none", "flex"]}>
+              <Text fontSize="xl" colorScheme="teal">
+                Cart
+              </Text>
+            </Box>
+          </Box>
+        </ButtonGroup>
       </Flex>
 
-
-
-  <ProductMenu/>
-
-
-    </div>
+      <ProductMenu hamburger={hamburger} sethamburger={sethamburger} />
+    </Box>
   );
 }

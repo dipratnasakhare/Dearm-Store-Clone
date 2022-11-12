@@ -30,18 +30,19 @@ export default function SlideShowclear() {
   ]
 
   return (
+    <Box
+   
+    >
     <Carousel
   swipeable={false}
   time={5}
   draggable={false}
   showDots={true}
   responsive={responsive}
-  // ssr={true} // means to render carousel on server-side.
+  ssr={true} // means to render carousel on server-side.
   infinite={true}
-
    autoPlay={true}
   autoPlaySpeed={2000}
-
   keyBoardControl={true}
   customTransition="all .5"
   transitionDuration={500}
@@ -52,7 +53,9 @@ export default function SlideShowclear() {
 >
   {sliderimg.map((ele)=>{
     return(
-      <Box >
+      <Box  
+      
+      >
       <img src={ele} alt="" />
     </Box>
     )
@@ -60,5 +63,6 @@ export default function SlideShowclear() {
   
 
 </Carousel>
+</Box>
   );
 }

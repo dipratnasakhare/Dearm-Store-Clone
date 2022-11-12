@@ -1,0 +1,53 @@
+.mainBox {
+  width: 85%;
+}
+.mainBox p{
+ padding: 5px;
+}
+  
+
+.mainBox > div {
+  margin: 3rem 0px;
+}
+
+.mainBox > div:nth-child(1) {
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.mainBox > div:nth-child(2) img {
+  margin-top: 3rem;
+  margin-right: 3rem;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.mainBox > div:nth-child(2) {
+  margin-right: 10rem;
+}
+
+.mainBox > div:nth-child(3) {
+  /* padding: 1rem; */
+  width: 120%;
+}
+
+.mainBox > div:nth-child(1) > img {
+  border: 1px solid;
+  margin-bottom: 5px;
+}
+
+.TextBar {
+  border: 1px solid;
+}
+
+.TextBar > div {
+  margin-bottom: 1rem;
+}
+
+.TextBar > div p {
+  text-align: start;
+}
+
+.TextBar button {
+  margin-left: 0px;
+}

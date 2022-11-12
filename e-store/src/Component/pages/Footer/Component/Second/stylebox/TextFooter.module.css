@@ -2,9 +2,6 @@
 
 .box{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
- 
-   /* margin-top: 2rem; */
 }
 
 .box > div  p {
