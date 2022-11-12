@@ -1,13 +1,14 @@
-import { Box  } from "@chakra-ui/react"
+import { Box, Grid, GridItem, SimpleGrid  } from "@chakra-ui/react"
 import ProductBox from "./Splitebox/ProductBox"
 import SlideBox from "./Splitebox/SlideBox"
 
 export default function SliderProduct(){
 
     return(
-        <Box display="flex">
+        <SimpleGrid columns={[1,2]} spacing={10} >
             <ProductBox />
             <SlideBox />
-        </Box>
+        </SimpleGrid>
     )
 }
+

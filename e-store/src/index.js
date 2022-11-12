@@ -4,13 +4,23 @@ import './index.css';
 import App from './App';
 import {ChakraProvider}  from "@chakra-ui/react"
 import reportWebVitals from './reportWebVitals';
-
+import {BrowserRouter} from "react-router-dom"
+import  AuthaCartDataprovider from "./Component/ContextAPI/Authcartdata"
+import AuthaCartData from "./Component/ContextAPI/AuthTableData"  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+   
     <ChakraProvider >
+    <BrowserRouter>
+    <AuthaCartDataprovider>
+      <AuthaCartData>
     <App />
+      </AuthaCartData>
+    </AuthaCartDataprovider>
+    </BrowserRouter>
     </ChakraProvider >
+   
   </React.StrictMode>
 );
 

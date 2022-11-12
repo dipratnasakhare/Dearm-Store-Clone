@@ -1,15 +1,17 @@
-
+import { useState } from "react";
 import SecF from "./Component/SecF" 
-import { Divider } from "@chakra-ui/react"
+import { Box, Divider, SimpleGrid } from "@chakra-ui/react"
 import CartFooterBox from "./Component/CartFooterBox/CartFooterBox";
+
 function Footer() {
+
+
+
     return (
-      <div  style={{paddingTop:"5px",width:"80%", margin:"auto"}}>
-      
-       <Divider style={{opacity:"100%"}}/>
+      <Box>
        <SecF/>
-       <CartFooterBox/>
-      </div>
+        <CartFooterBox/>
+      </Box >
     );
   }
   

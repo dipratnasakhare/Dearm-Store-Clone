@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react"
+import { Box, Flex, Grid, SimpleGrid } from "@chakra-ui/react"
 import style from "./Footercss/SecondF.module.css"
 
 import FirstBox from "./Second/TextFooter"
@@ -12,10 +12,10 @@ export default function footer(){
      
     return(
         <>
-        <Box borderBottom="1px solid" gap={10} className={style.box}>
+        <SimpleGrid columns={[1, 2]} gap={10} className={style.box}>
            <SecBox/>
            <FirstBox/>
-        </Box>
+        </SimpleGrid>
         </>
 
     )

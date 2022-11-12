@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 
 export default function CategoryBox(){
 
@@ -12,20 +12,20 @@ export default function CategoryBox(){
     
   ]
     return(
-       <Box >
+       <Box>
          <Heading as='h3' size='xl'>
            Shop By Category
          </Heading>
 
-         <Box m="auto"  display="flex">
+         <Grid templateColumns={['repeat(2, 1fr)', 'repeat(6, 1fr)']}>
             {catogerydata.map((ele)=>{
               return(
-                <Box m="auto">
+                <GridItem m="auto">
                   <img src={ele} alt="" />
-                </Box>
+                </GridItem>
               )
             })}
-         </Box>
+         </Grid>
        </Box>
     )
 }

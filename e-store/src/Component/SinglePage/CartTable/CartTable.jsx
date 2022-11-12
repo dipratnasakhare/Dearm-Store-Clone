@@ -1,16 +1,31 @@
-import SliderForAll from "../../Page/SliderForall";
-import { Box, GridItem } from "@chakra-ui/react";
+import {
+  TableContainer,
+  Table,
+  TableCaption,
+  Thead,
+  Th,
+  Tbody,
+  Tr,
+  Tfoot,
+  Td,
+  Icon,
+  Button,
+  Heading,
+  Flex,
+  Image,
+  Text,
+} from "@chakra-ui/react";
+import { useState, useContext } from "react";
+import { AuthTableData } from "../../ContextAPI/AuthTableData"
+import TableRow from "./TableRow/TableRow";
 
-export default function SlideBox() {
-  let sliderimg = [
-    "https://static.thcdn.com/images/xlarge/webp/widgets/208-us/12/original-1031-STDCRE-43056-DS-WC-November-Batching-Shot-02-HomePage_1920x700-094812.jpg",
-    "https://static.thcdn.com/images/xlarge/webp/widgets/208-us/50/original-1031-STDCRE-43056-DS-WC-November-Batching-Shot-09-HomePage_1920x700-021350.jpg",
-    "https://static.thcdn.com/images/xlarge/webp/widgets/208-us/34/1007-STDCRE-41315-WC-DS-Dermstore-Advent-Calendar-2022-Trading-Gif-1920x700-034034.gif",
-    "https://static.thcdn.com/images/xlarge/webp/widgets/208-us/09/original-1027-STDCRE-42686-DS-EF-Cyber-Waitlist-V1-1920x700-082409.jpg",
-    "https://static.thcdn.com/images/xlarge/webp/widgets/208-us/15/original-1031-STDCRE-43056-DS-WC-November-Batching-Shot-02A-HomePage_1920x700-020215.jpg",
-  ];
+export default function CartTable() {
+  let [allTotal, setAllTotal] = useState(0);
 
-  let data = [
+  const {setTableList, tableList} = useContext(AuthTableData)
+
+
+  let arr = [
     {
       brandName: "SEPHORA COLLECTION",
       currentSku: {
@@ -222,114 +237,49 @@ export default function SlideBox() {
       reviews: "819",
       targetUrl: "/product/dior-lip-glow-oil-P453814",
     },
-    {
-      brandName: "Dior",
-      currentSku: {
-        biExclusiveLevel: "none",
-        imageAltText: "Dior - Dior Addict Lip Glow",
-        isAppExclusive: false,
-        isBI: false,
-        isBest: false,
-        isFirstAccess: false,
-        isLimitedEdition: false,
-        isLimitedTimeOffer: false,
-        isNatural: false,
-        isNew: false,
-        isOnlineOnly: true,
-        isOrganic: false,
-        isSephoraExclusive: true,
-        listPrice: "$38.00",
-        salePrice: "",
-        skuId: "2579340",
-        skuImages: {
-          image135:
-            "https://www.sephora.com/productimages/sku/s2579340-main-grid.jpg",
-          image162:
-            "https://www.sephora.com/productimages/sku/s2579340-162.jpg",
-          image250:
-            "https://www.sephora.com/productimages/sku/s2579340-main-hero.jpg",
-          image42:
-            "https://www.sephora.com/productimages/sku/s2579340-main-thumb.jpg",
-          image450:
-            "https://www.sephora.com/productimages/sku/s2579340-main-Lhero.jpg",
-          image62:
-            "https://www.sephora.com/productimages/sku/s2579340-main-Lthumb.jpg",
-          image97:
-            "https://www.sephora.com/productimages/sku/s2579340-main-Sgrid.jpg",
-        },
-        skuType: "Standard",
-      },
-      displayName: "Dior Addict Lip Glow",
-      heroImage:
-        "https://www.sephora.com/productimages/sku/s2579340-main-grid.jpg",
-      image135:
-        "https://www.sephora.com/productimages/sku/s2579340-main-grid.jpg",
-      image250:
-        "https://www.sephora.com/productimages/sku/s2579340-main-hero.jpg",
-      image450:
-        "https://www.sephora.com/productimages/sku/s2579340-main-Lhero.jpg",
-      moreColors: 13,
-      productId: "P236816",
-      rating: "4.3694",
-      reviews: "1960",
-      targetUrl: "/product/dior-addict-lip-glow-color-reviver-balm-P236816",
-    },
-    {
-      brandName: "Sol de Janeiro",
-      currentSku: {
-        biExclusiveLevel: "none",
-        imageAltText: "Sol de Janeiro - Brazilian Bum Bum Body Cream",
-        isAppExclusive: false,
-        isBI: false,
-        isBest: false,
-        isFirstAccess: false,
-        isLimitedEdition: false,
-        isLimitedTimeOffer: false,
-        isNatural: false,
-        isNew: false,
-        isOnlineOnly: false,
-        isOrganic: false,
-        isSephoraExclusive: true,
-        listPrice: "$22.00 - $85.00",
-        salePrice: "",
-        skuId: "1802412",
-        skuImages: {
-          image135:
-            "https://www.sephora.com/productimages/sku/s1802412-main-grid.jpg",
-          image162:
-            "https://www.sephora.com/productimages/sku/s1802412-162.jpg",
-          image250:
-            "https://www.sephora.com/productimages/sku/s1802412-main-hero.jpg",
-          image42:
-            "https://www.sephora.com/productimages/sku/s1802412-main-thumb.jpg",
-          image450:
-            "https://www.sephora.com/productimages/sku/s1802412-main-Lhero.jpg",
-          image62:
-            "https://www.sephora.com/productimages/sku/s1802412-main-Lthumb.jpg",
-          image97:
-            "https://www.sephora.com/productimages/sku/s1802412-main-Sgrid.jpg",
-        },
-        skuType: "Standard",
-      },
-      displayName: "Brazilian Bum Bum Body Cream",
-      heroImage:
-        "https://www.sephora.com/productimages/sku/s1802412-main-grid.jpg",
-      image135:
-        "https://www.sephora.com/productimages/sku/s1802412-main-grid.jpg",
-      image250:
-        "https://www.sephora.com/productimages/sku/s1802412-main-hero.jpg",
-      image450:
-        "https://www.sephora.com/productimages/sku/s1802412-main-Lhero.jpg",
-      productId: "P406080",
-      rating: "4.3047",
-      reviews: "8462",
-      targetUrl: "/product/brazilian-bum-bum-cream-P406080",
-    },
   ];
 
   return (
-    <Box>
-      <SliderForAll sliderimg={data} />
-    </Box>
+    <TableContainer>
+      <Table variant="simple" mt="5rem" mb="5rem">
+        <TableCaption>
+          <Button borderRadius={"0px"} bg="black" _hovar={"none"} color="white">CHECKOUT SECURELY NOW</Button>
+        </TableCaption>
+        <Thead>
+          <Tr>
+            <Th>items</Th>
+            <Th>Price</Th>
+            <Th>Quantity</Th>
+            <Th>Subtotal</Th>
+            <Th>Remove</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <TableRow allTotal={allTotal} setAllTotal={setAllTotal} arr={tableList} />
+        </Tbody>
+
+        <Tfoot>
+          <Tr>
+            <Th>
+              {" "}
+              <Flex m="5rem">
+                <Image
+                  width="50px"
+                  src="https://as1.ftcdn.net/v2/jpg/03/95/04/78/1000_F_395047812_kmXO1JBQKNqWeOQSCTvagAm30wnaWkz7.jpg"
+                  alt="star"
+                />
+                <Heading as="h5" size="sm">
+                  Rewards Members earn {allTotal} points on this order
+                </Heading>
+              </Flex>
+            </Th>
+            <Th isNumeric>
+              {" "}
+              <Heading>Total {allTotal}</Heading>
+            </Th>
+          </Tr>
+        </Tfoot>
+      </Table>
+    </TableContainer>
   );
 }
