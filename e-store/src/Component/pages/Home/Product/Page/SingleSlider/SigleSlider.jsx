@@ -14,7 +14,6 @@ import { useContext } from "react"
 import { useNavigate } from "react-router-dom";
 export default function SingleSlider({ ele }) {
 
-
  const { setCartData, cartData } = useContext(AuthaCartData)
 
   const navigate = useNavigate();

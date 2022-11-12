@@ -21,8 +21,19 @@ export default function CartPage() {
   let [productimage, setproductimage] = useState([]);
   let [quntity, setQuntity] = useState(1);
   
-  const {setTableList, tableList} = useContext(AuthTableData)
+  const {funcsetList, tableList} = useContext(AuthTableData)
+
   const { setCartData, cartData } = useContext(AuthaCartData)
+
+ let handelAddtocart = () => {
+  funcsetList(cartData)
+  console.log(tableList)
+ }
+
+
+
+
+
 
   useEffect(() => {
     let photos = cartData.currentSku.skuImages;
@@ -35,56 +46,7 @@ export default function CartPage() {
   
   }, []);
 
-  // let x = Object.keys(cartData).length
-    let obj = {
-      "brandName": "Farmacy",
-      "currentSku": {
-          "badgeAltText": "Clean plus planet positive",
-          "biExclusiveLevel": "none",
-          "imageAltText": "Farmacy - Honey Haven Hydration Bestsellers Set",
-          "isAppExclusive": false,
-          "isBI": false,
-          "isBest": false,
-          "isFirstAccess": false,
-          "isLimitedEdition": true,
-          "isLimitedTimeOffer": false,
-          "isNatural": false,
-          "isNew": true,
-          "isOnlineOnly": false,
-          "isOrganic": false,
-          "isSephoraExclusive": true,
-          "listPrice": "$60.00",
-          "salePrice": "",
-          "skuId": "2613958",
-          "skuImages": {
-              "image135": "https://www.sephora.com/productimages/sku/s2613958-main-grid.jpg?pb=clean-planet-positive-badge-2021",
-              "image162": "https://www.sephora.com/productimages/sku/s2613958-162.jpg?pb=clean-planet-positive-badge-2021",
-              "image250": "https://www.sephora.com/productimages/sku/s2613958-main-hero.jpg?pb=clean-planet-positive-badge-2021",
-              "image42": "https://www.sephora.com/productimages/sku/s2613958-main-thumb.jpg?pb=clean-planet-positive-badge-2021",
-              "image450": "https://www.sephora.com/productimages/sku/s2613958-main-Lhero.jpg?pb=clean-planet-positive-badge-2021",
-              "image62": "https://www.sephora.com/productimages/sku/s2613958-main-Lthumb.jpg?pb=clean-planet-positive-badge-2021",
-              "image97": "https://www.sephora.com/productimages/sku/s2613958-main-Sgrid.jpg?pb=clean-planet-positive-badge-2021"
-          },
-          "skuType": "Standard",
-          "valuePrice": "$93.00"
-      },
-      "displayName": "Honey Haven Hydration Bestsellers Set",
-      "heroImage": "https://www.sephora.com/productimages/sku/s2613958-main-grid.jpg?pb=clean-planet-positive-badge-2021",
-      "image135": "https://www.sephora.com/productimages/sku/s2613958-main-grid.jpg?pb=clean-planet-positive-badge-2021",
-      "image250": "https://www.sephora.com/productimages/sku/s2613958-main-hero.jpg?pb=clean-planet-positive-badge-2021",
-      "image450": "https://www.sephora.com/productimages/sku/s2613958-main-Lhero.jpg?pb=clean-planet-positive-badge-2021",
-      "productId": "P501292",
-      "rating": "4.5556",
-      "reviews": "9",
-      "targetUrl": "/product/honey-haven-set-P501292"
-  }
- 
-  setCartData(obj)
-
-  let handelAdd = () => {
-    setTableList([...tableList,cartData ])
-    console.log(tableList)
-  }
+  
   return (
     <>
     <Grid templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}  className={styles.mainBox}>
@@ -94,8 +56,8 @@ export default function CartPage() {
         })}
       </GridItem >
 
-      <GridItem >
-        <Image src={cartData.image450} />
+      <GridItem display={["none", "inline"]}  >
+        <Image  src={cartData.image450} />
       </GridItem >
 
       <GridItem  className={styles.TextBar}  p="1rem">
@@ -205,7 +167,7 @@ export default function CartPage() {
             </Button>
           </Box>
           <Box>
-            <Button  onClick={()=>handelAdd} bg="blue.900" color="white" borderRadius={"0px"}>
+            <Button onClick={handelAddtocart} bg="blue.900" color="white" borderRadius={"0px"}>
               ADD TO CART
             </Button>
           </Box>

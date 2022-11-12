@@ -1,4 +1,4 @@
-import { Td, Button } from "@chakra-ui/react";
+import { Td, Button, Box } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import TotalCount from "./TotalCount/TotalCount";
 
@@ -8,7 +8,7 @@ export default function ButtonQuantity({ price, setAllTotal, allTotal}) {
 
   return (
     <>
-    <Td>
+    <Box as="td">
       <Button
         disabled={quantity === 1}
         border="1px solid"
@@ -28,7 +28,7 @@ export default function ButtonQuantity({ price, setAllTotal, allTotal}) {
       >
         +
       </Button>
-    </Td>
+    </Box>
      <TotalCount allTotal={allTotal}  quantity={quantity} price={price} setAllTotal={setAllTotal} />
     </>
   );
