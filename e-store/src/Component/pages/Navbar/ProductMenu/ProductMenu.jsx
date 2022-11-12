@@ -25,13 +25,13 @@ export default function ProductMenu({hamburger}) {
     <>
       <Flex
         gap="2"
-        borderTop="1px solid "
+        borderTop="1px solid"
         alignItems="end"
         margin="auto"
         pt="10px"
         width="100%"
         display={["none", "flex"]}
-        borderBottom="1px solid "
+     
       >
         <Box margin="auto" gap={7} display="flex">
           {MenuData.map((ele) => MenuButtondata(ele))}
