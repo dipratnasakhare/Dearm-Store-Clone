@@ -1,5 +1,5 @@
 import SliderForAll from "../../Page/SliderForall";
-import { Box, GridItem } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export default function SlideBox() {
   let sliderimg = [

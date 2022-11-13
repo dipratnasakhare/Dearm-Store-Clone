@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, SimpleGrid  } from "@chakra-ui/react"
+import { SimpleGrid  } from "@chakra-ui/react"
 import ProductBox from "./Splitebox/ProductBox"
 import SlideBox from "./Splitebox/SlideBox"
 

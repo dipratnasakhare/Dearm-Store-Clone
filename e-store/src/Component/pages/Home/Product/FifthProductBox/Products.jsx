@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Heading, Text, Image, Grid, GridItem } from "@chakra-ui/react" 
+import { Box, Heading, Text, Image, Grid, GridItem } from "@chakra-ui/react" 
 
 export default function Products(){
 
