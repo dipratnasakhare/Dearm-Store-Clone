@@ -3,7 +3,6 @@ import {
   Image,
   Flex,
   Text,
-  SimpleGrid,
   Radio,
   Heading,
   Divider,
@@ -29,9 +28,6 @@ export default function CartPage() {
   funcsetList(cartData)
   console.log(tableList)
  }
-
-
-
 
 
 

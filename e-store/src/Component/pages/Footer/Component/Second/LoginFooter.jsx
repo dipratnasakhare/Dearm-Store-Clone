@@ -1,13 +1,8 @@
 import {
   Box,
   Text,
-  Image,
-  Input,
-  Heading,
   Button,
-  GridItem,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 import styled from "./stylebox/LoginFooter.module.css";

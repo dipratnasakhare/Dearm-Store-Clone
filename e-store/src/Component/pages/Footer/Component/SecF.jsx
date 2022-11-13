@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, SimpleGrid } from "@chakra-ui/react"
+import { SimpleGrid } from "@chakra-ui/react"
 import style from "./Footercss/SecondF.module.css"
 
 import FirstBox from "./Second/TextFooter"
