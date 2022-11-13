@@ -9,19 +9,18 @@ import {
 } from "@chakra-ui/react";
 import "react-multi-carousel/lib/styles.css";
 import { StarIcon } from "@chakra-ui/icons";
-import {AuthaCartData} from "../../../../../ContextAPI/Authcartdata"
-import { useContext } from "react"
+import { AuthaCartData } from "../../../../../ContextAPI/Authcartdata";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 export default function SingleSlider({ ele }) {
-
- const { setCartData, cartData } = useContext(AuthaCartData)
+  const { setCartData, cartData } = useContext(AuthaCartData);
 
   const navigate = useNavigate();
 
- let handelCart = () => {
-  setCartData(ele)
-  navigate("/5")
- }
+  let handelCart = () => {
+    setCartData(ele);
+    navigate("/5");
+  };
   return (
     <Flex
       m="10px"

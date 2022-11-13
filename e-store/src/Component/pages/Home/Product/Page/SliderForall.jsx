@@ -29,10 +29,7 @@ export default function SliderForAll({ sliderimg, size = 2 }) {
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
-
         showDots={true}
-
-
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
@@ -41,7 +38,7 @@ export default function SliderForAll({ sliderimg, size = 2 }) {
       >
         {sliderimg.map((ele) => {
           return (
-            <Box >
+            <Box>
               <SingleSlider ele={ele} />
             </Box>
           );

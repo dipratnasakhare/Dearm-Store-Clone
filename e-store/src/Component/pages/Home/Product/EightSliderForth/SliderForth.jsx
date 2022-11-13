@@ -1,5 +1,3 @@
-import { Box, Heading } from "@chakra-ui/react";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SliderForAll from "../Page/SliderForall";
 import { useState, useEffect } from "react";
@@ -18,7 +16,7 @@ export default function SliderForth() {
 
   function Getdata() {
     return axios(
-      "https://26270dca-bc28-48eb-b02b-8cbeea43c41c.mock.pstmn.io/Get"
+      "https://5b595b03-6d8c-44ad-8412-aea60e856d42.mock.pstmn.io/Get"
     );
   }
 

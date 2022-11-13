@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
+import { Box , Grid, GridItem, Heading } from "@chakra-ui/react";
 
 export default function CategoryBox(){
 
