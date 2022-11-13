@@ -1,6 +1,5 @@
-import { Flex, Icon, Box, Button } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import MenuButtondata from "./MenuButton";
-import { CloseIcon } from "@chakra-ui/icons";
 
 // import MenuButon from "./Textnavdata";
 

@@ -2,19 +2,14 @@ import {
   TableContainer,
   Table,
   TableCaption,
-  Thead,
   Th,
-  Tbody,
   Tr,
   Tfoot,
-  Td,
-  Icon,
   Box,
   Button,
   Heading,
   Flex,
   Image,
-  Text,
 } from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import { AuthTableData } from "../../ContextAPI/AuthTableData";
@@ -32,13 +27,19 @@ import {
 
 export default function CartTable() {
   let [allTotal, setAllTotal] = useState(0);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const { tableList, setTableList, newFunRemovedata } =
     useContext(AuthTableData);
+
   let handeldelate = (id) => {
     newFunRemovedata(id);
-    console.log(id, "id");
   };
+
+
+  
+  
 
   return (
     <Box m="auto" mt="5rem" mb="5rem" w="90%" border={"1px solid"}>
@@ -97,7 +98,7 @@ export default function CartTable() {
             <Tr>
               <Th>
                 {" "}
-                {tableList.length == 0 ? (
+                {tableList.length === 0 ? (
                   ""
                 ) : (
                   <Flex m="5rem" display={["none", "flex"]}>
@@ -113,12 +114,12 @@ export default function CartTable() {
                 )}
               </Th>
               <Th isNumeric>
-                {tableList.length == 0 ? (
+                {tableList.length === 0 ? (
                   <Heading as="h2" size="xl">
                     No Product Precent In Your Cart
                   </Heading>
                 ) : (
-                 "" // <Heading>Total {allTotal}</Heading>
+                   <Heading>Total ${allTotal}</Heading>
                 )}
               </Th>
             </Tr>

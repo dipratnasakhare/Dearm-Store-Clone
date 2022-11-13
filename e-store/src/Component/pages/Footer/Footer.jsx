@@ -1,6 +1,5 @@
-import { useState } from "react";
 import SecF from "./Component/SecF" 
-import { Box, Divider, SimpleGrid } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import CartFooterBox from "./Component/CartFooterBox/CartFooterBox";
 
 function Footer() {

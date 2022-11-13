@@ -1,4 +1,4 @@
-import { Box, Text, Image, GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Box, Text, Image, SimpleGrid } from "@chakra-ui/react";
 import styled from "./stylebox/TextFooter.module.css";
 
 export default function footer() {
