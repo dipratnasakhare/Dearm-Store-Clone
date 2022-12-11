@@ -7,8 +7,11 @@ https://6370db3f42049a3981369b9a--exquisite-cactus-9e08bd.netlify.app
 
 hellow every one to my github
 
-in this project i am going clone a website name of website if BestBuy to do this project i am using react langauage  time duration of 5 days
-this is first day today i am going to plain what part i have to build i am creation issue and task going to draw of component degine i take 4 part 
-to build home,login,cart,map my full focus on styling if i got time then i am thinking to add functnality
+The Dermstore app makes it easy to shop for all your favorite skincare, hair care and beauty products from your mobile device. Come join the largest community of skin care enthusiasts, those tired of trying what doesn’t work, those who believe the only secret to beauty is health.
+
+this is react project wich build in 5 days
+
+working detailse :- Home page with json mock server data navbar footer with sign in page without authentication able to add product in cart and increase quantity decrease quantity total also showing all page is responsive
+
 
 
