@@ -2,16 +2,24 @@
 
 
 
-
-clone website 
-https://6370db3f42049a3981369b9a--exquisite-cactus-9e08bd.netlify.app
-
-explaining video
-https://drive.google.com/file/d/16yNrm5cw6tfkf1crhWyidOKw4l4rp7g6/view?usp=sharing
-
 this is react project wich build in 5 days
 
 working detailse :- Home page with json mock server data navbar footer with sign in page without authentication able to add product in cart and increase quantity decrease quantity total also showing all page is responsive
+
+
+
+
+
+
+### `clone website`
+https://6370db3f42049a3981369b9a--exquisite-cactus-9e08bd.netlify.app
+
+### `explaining video`
+https://drive.google.com/file/d/16yNrm5cw6tfkf1crhWyidOKw4l4rp7g6/view?usp=sharing
+
+
+
+
 
 
 
