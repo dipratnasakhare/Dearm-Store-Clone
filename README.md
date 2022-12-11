@@ -17,23 +17,6 @@ working detailse :- Home page with json mock server data navbar footer with sign
 
 
 
-
-
-hellow every one to my github
-clone of Dearm store website details
-
-
-The Dermstore app makes it easy to shop for all your favorite skincare, hair care and beauty products from your mobile device. Come join the largest community of skin care enthusiasts, those tired of trying what doesn’t work, those who believe the only secret to beauty is health.
-
-
-
-
-
-
-
-
-
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -59,8 +42,23 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `website details`
+hellow every one to my github
+clone of Dearm store website details
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The Dermstore app makes it easy to shop for all your favorite skincare, hair care and beauty products from your mobile device. Come join the largest community of skin care enthusiasts, those tired of trying what doesn’t work, those who believe the only secret to beauty is health.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
