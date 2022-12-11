@@ -22,6 +22,13 @@ https://drive.google.com/file/d/16yNrm5cw6tfkf1crhWyidOKw4l4rp7g6/view?usp=shari
 
 
 
+### `website details`
+ Dearm store website details
+
+The Dermstore app makes it easy to shop for all your favorite skincare, hair care and beauty products from your mobile device. Come join the largest community of skin care enthusiasts, those tired of trying what doesn’t work, those who believe the only secret to beauty is health.
+
+link :- https://www.dermstore.com/
+
 
 
 
@@ -50,12 +57,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `website details`
-hellow every one to my github
-clone of Dearm store website details
-
-
-The Dermstore app makes it easy to shop for all your favorite skincare, hair care and beauty products from your mobile device. Come join the largest community of skin care enthusiasts, those tired of trying what doesn’t work, those who believe the only secret to beauty is health.
 
 
 
