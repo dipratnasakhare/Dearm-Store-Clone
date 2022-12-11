@@ -2,7 +2,7 @@
 
 React project
 
-#clone website 
+clone website 
 https://6370db3f42049a3981369b9a--exquisite-cactus-9e08bd.netlify.app
 
 hellow every one to my github
