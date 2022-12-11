@@ -1,4 +1,4 @@
-# E-Store
+# Dream-Store
 
 React project
 
