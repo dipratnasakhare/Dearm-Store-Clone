@@ -59,11 +59,25 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `screen shots of clone website`
 
+### Home 
+
+![image](https://raw.githubusercontent.com/dipratnasakhare/test/main/ScreenShot/DearmStore/Screenshot%20(690).png)
+
+
+### Single Product Page
+
+![image](https://raw.githubusercontent.com/dipratnasakhare/test/main/ScreenShot/DearmStore/Screenshot%20(692).png)
 
 ### footer
+
 ![image](https://raw.githubusercontent.com/dipratnasakhare/test/main/ScreenShot/DearmStore/Screenshot%20(697).png)
 
 
+### responsive
+
+![image](https://raw.githubusercontent.com/dipratnasakhare/test/main/ScreenShot/DearmStore/Screenshot%20(695).png)
+
+![image](https://raw.githubusercontent.com/dipratnasakhare/test/main/ScreenShot/DearmStore/Screenshot%20(696).png)
 
 
 
